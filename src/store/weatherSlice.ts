@@ -13,7 +13,9 @@ import {
 } from '../interfaces/weather'
 
 async function formatWeather(res: WeatherApi) {
-    let days: any = res.list.reduce((accumulator: AccumulatorDay, currentValue: WeatherDayApi) => {
+    let days: {
+        [value: string]: Array<WeatherDay>
+    } = res.list.reduce((accumulator: AccumulatorDay, currentValue: WeatherDayApi) => {
 
         let obj: WeatherDay = {
             date: currentValue.dt_txt,

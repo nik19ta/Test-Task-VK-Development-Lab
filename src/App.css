@@ -44,3 +44,7 @@ pre {
 .weather_card {
     margin-top: 8px;
 }
+
+.main {
+    min-height: calc(100vh - 64px);
+}

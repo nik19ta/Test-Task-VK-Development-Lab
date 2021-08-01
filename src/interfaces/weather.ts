@@ -19,8 +19,12 @@ export interface WeatherCity {
     city_name: string,
     country: string,
     days: {
-        [value: string]: WeatherDay
+        [value: string]: Array<WeatherDay>
     }
+}
+
+export interface WeatherWeek {
+    [value: string]: WeatherDay
 }
 
 export interface AccumulatorDay {
