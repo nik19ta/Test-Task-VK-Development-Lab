@@ -1,19 +1,36 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { FC, useRef } from 'react';
 
 import { Form, Input, Button } from 'antd';
 import { GetWeatherBySityName } from '../store/weatherSlice';
+import { WeatherCity } from '../interfaces/weather';
+import { RootState } from '../store/rootReducer';
+import { setAlert } from '../store/alertSlice';
 
 
 export const From: FC = () => {
+    const weather: Array<WeatherCity> = useSelector((state: RootState) => state.weather.sities)
     const refInput = useRef<Input>(null);
+
     const dispatch = useDispatch()
 
     const onFinish = (values: { cityName: string }) => {
         if (refInput && refInput.current) {
             refInput.current.input.value = '';
         }
-        dispatch(GetWeatherBySityName(values['cityName']))
+
+        for (let i = 0; i < weather.length; i++) {
+            if (weather[i].city_name.toLowerCase() === values.cityName.toLowerCase()) {
+                dispatch(setAlert({
+                    message: "You can't add a city",
+                    description: "The city has already been added",
+                    type: "warning"
+                }))
+                return
+            }
+        }
+
+        dispatch(GetWeatherBySityName(values.cityName))
     };
 
     return (

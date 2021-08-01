@@ -67,12 +67,12 @@ export const GetWeather = createAsyncThunk(
 
 interface initialState {
     sities: Array<WeatherCity>,
-    loading: boolean
+    errors: boolean
 }
 
 const initialState: initialState = {
     sities: [],
-    loading: true
+    errors: false
 }
 
 export const weatherSlice = createSlice({
@@ -84,16 +84,26 @@ export const weatherSlice = createSlice({
                 return item.city_name !== action.payload
             })
         },
+        delError: (state) => {
+            state.errors = false
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(GetWeatherBySityName.fulfilled, (state, action) => {
             state.sities.push(action.payload)
         })
+        builder.addCase(GetWeatherBySityName.rejected, (state) => {
+            console.log('error');
+            state.errors = true
+        })
         builder.addCase(GetWeather.fulfilled, (state, action) => {
             state.sities.push(action.payload)
+        })
+        builder.addCase(GetWeather.rejected, (state) => {
+            console.log('error');
         })
     }
 })
 
-export const { deleteCity } = weatherSlice.actions
+export const { deleteCity, delError } = weatherSlice.actions
 export default weatherSlice.reducer
