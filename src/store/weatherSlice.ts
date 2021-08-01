@@ -16,7 +16,7 @@ export const GetWeather = createAsyncThunk(
     "weather/fetchWeather",
     async (coordinates: Coordinates, {}) => {
         const response: Response = await fetch(`
-            http://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${'52d1d8f3095914669900b1bcc8569c2e'}&units=metric`)
+            https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${'52d1d8f3095914669900b1bcc8569c2e'}&units=metric`)
 
         const res: WeatherApi = await response.json();
         let days: any = res.list.reduce((accumulator: AccumulatorDay, currentValue: WeatherDayApi) => {

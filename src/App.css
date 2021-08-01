@@ -1,1 +1,46 @@
 @import '~antd/dist/antd.css';
+
+* {
+    box-sizing: border-box;
+}
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+.ant-row {
+    margin: 0 !important;
+}
+
+.weather_image {
+    width: 50px;
+    height: 50px;
+}
+
+.header__title {
+    color: #f0f2f5;
+}
+
+.sider {
+    background: #f2f2f2;
+    width: 300px !important;
+    max-width: 300px !important;
+    flex-basis: 300px !important;
+}
+
+.form {
+    padding: 8px;
+}
+
+.submitBtn {
+    margin-top: 8px;
+}
+
+.clouds_wind {
+    display: flex;
+    gap: 20px;
+}
+
+.weather_card {
+    margin-top: 8px;
+}
