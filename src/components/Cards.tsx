@@ -29,19 +29,19 @@ export const Cards = () => {
                                 <div key={key} >
                                     <Card className="weather_card" title={days[new Date(key).getDay()] + ":"} >
                                         <Tabs defaultActiveKey="1" tabPosition={'top'} style={{ height: 180 }}>
-                                            {Object.keys(weather[0].days[key]).map((item, i) => (
+                                            {Object.keys(city.days[key]).map((item, i) => (
                                              <TabPane
                                                 key={i}
-                                                tab={weather[0].days[key][i].date.split(' ')[1].split(':')[0] + ":" + weather[0].days[key][i].date.split(' ')[1].split(':')[1]} >
+                                                    tab={city.days[key][i].date.split(' ')[1].split(':')[0] + ":" + city.days[key][i].date.split(' ')[1].split(':')[1]} >
 
-                                                <img className="weather_image" src={weather[0].days[key][i].icon} alt="weather icon" ></img>
+                                                    <img className="weather_image" src={city.days[key][i].icon} alt="weather icon" ></img>
                                                 <p className="temperature" >
-                                                    <span className="temperature__main" >temperature: {weather[0].days[key][i].temp}°, </span>
-                                                    <span className="temperature__feels_like" > feels like:  {weather[0].days[key][i].temp_feels_like}°</span>
+                                                        <span className="temperature__main" >temperature: {city.days[key][i].temp}°, </span>
+                                                        <span className="temperature__feels_like" > feels like:  {city.days[key][i].temp_feels_like}°</span>
                                                 </p>
                                                 <div className="clouds_wind" >
-                                                    <p className="clouds" >clouds: {weather[0].days[key][i].clouds}</p>
-                                                    <p className="wind" >wind: {weather[0].days[key][i].wind}</p>
+                                                    <p className="clouds" >clouds: {city.days[key][i].clouds}</p>
+                                                    <p className="wind" >wind: {city.days[key][i].wind}</p>
                                                 </div>
                                             </TabPane>
                                         ))}
