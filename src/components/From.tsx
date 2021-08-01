@@ -1,8 +1,15 @@
-import { Form, Input, Button, Checkbox } from 'antd';
+import { useDispatch } from 'react-redux'
+import { FC } from 'react';
 
-export const From = () => {
-    const onFinish = (values: any) => {
+import { Form, Input, Button, Checkbox } from 'antd';
+import { GetWeatherBySityName } from '../store/weatherSlice';
+
+export const From: FC = () => {
+    const dispatch = useDispatch()
+
+    const onFinish = (values: { cityName: string }) => {
         console.log('Success:', values);
+        dispatch(GetWeatherBySityName(values['cityName']))
     };
 
     const onFinishFailed = (errorInfo: any) => {
@@ -21,7 +28,7 @@ export const From = () => {
         >
             <Form.Item
                 label="city name"
-                name="city name"
+                name="cityName"
                 rules={[{ required: true, message: 'Please input city name!' }]}
             >
                 <Input />
