@@ -47,7 +47,7 @@ export const GetWeatherBySityName = createAsyncThunk(
     "weather/GetWeatherBySityName",
         async (sityName: string, { }) => {
             const response: Response = await fetch(`
-            https://api.openweathermap.org/data/2.5/forecast?q=${sityName}&appid=${'52d1d8f3095914669900b1bcc8569c2e'}&units=metric`)
+            https://api.openweathermap.org/data/2.5/forecast?q=${sityName}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}&units=metric`)
 
             const res: WeatherApi = await response.json();
 
@@ -58,7 +58,7 @@ export const GetWeather = createAsyncThunk(
     "weather/fetchWeather",
     async (coordinates: Coordinates, {}) => {
         const response: Response = await fetch(`
-            https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${'52d1d8f3095914669900b1bcc8569c2e'}&units=metric`)
+            https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}&units=metric`)
 
         const res: WeatherApi = await response.json();
 
