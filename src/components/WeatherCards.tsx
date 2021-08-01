@@ -27,7 +27,7 @@ export const WeatherCards = () => {
         <Tabs
             type="editable-card"
             onEdit={onEdit}
-            defaultActiveKey="1"
+            defaultActiveKey="0"
             hideAdd={true}
             tabPosition={'top'}>
             {weather.map((city: WeatherCity, k: number) => {
