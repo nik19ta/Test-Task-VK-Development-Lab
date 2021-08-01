@@ -18,9 +18,10 @@ yarn
 
 2. Создать в корне проекта `.env` файл и записать туда ключ
 
-получить api key можно [тут](https://home.openweathermap.org/api_keys)
+получить api key можно [тут](https://openweathermap.org/price)
+посмотреть api key можно [тут](https://home.openweathermap.org/api_keys)
 ```
-OPEN_WEATHER_MAP_KEY = 'sekret key'
+REACT_APP_OPEN_WEATHER_KEY=sekret key
 ```
 
 3. Для того что бы запустить локаольно в разработке нужно
@@ -29,18 +30,4 @@ OPEN_WEATHER_MAP_KEY = 'sekret key'
 npm start
 # or
 yarn bash
-```
-
-4. Для того что бы запустить в production нужно:
-
-- Собрать react приложение
-```sh
-npm run build
-# or
-yarn build
-```
-- Поместить файлы на сервер
-```sh
-cd build; # Перейти в папку build
-rsync --archive --compress --delete . `user`@`ip`:`Путь к папке на сервере` # Отправляем данные на сервер
 ```
