@@ -1,6 +1,7 @@
 import {
     createSlice,
-    createAsyncThunk
+    createAsyncThunk,
+    PayloadAction
 } from '@reduxjs/toolkit'
 
 import {
@@ -62,8 +63,7 @@ export const GetWeather = createAsyncThunk(
         const res: WeatherApi = await response.json();
 
         return await formatWeather(res) as WeatherCity
-    }
-)
+    })
 
 interface initialState {
     sities: Array<WeatherCity>,
@@ -78,7 +78,13 @@ const initialState: initialState = {
 export const weatherSlice = createSlice({
     name: 'weather',
     initialState,
-    reducers: {},
+    reducers: {
+        deleteCity: (state, action: PayloadAction<string>) => {
+            state.sities = state.sities.filter((item: WeatherCity)  => {
+                return item.city_name !== action.payload
+            })
+        },
+    },
     extraReducers: (builder) => {
         builder.addCase(GetWeatherBySityName.fulfilled, (state, action) => {
             state.sities.push(action.payload)
@@ -89,4 +95,5 @@ export const weatherSlice = createSlice({
     }
 })
 
+export const { deleteCity } = weatherSlice.actions
 export default weatherSlice.reducer

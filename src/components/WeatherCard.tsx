@@ -18,7 +18,7 @@ export const WeatherCard = (props: { index: string, city: WeatherCity }) => {
 
     return (
         <Card className="weather_card" title={days[new Date(props.index).getDay()] + ":"} >
-            <Tabs defaultActiveKey="1" tabPosition={'top'} style={{ height: 180 }}>
+            <Tabs defaultActiveKey="1" tabPosition={'top'} style={{ height: 180 }} >
                 {Object.keys(props.city.days[props.index]).map((_: string, i: number) => (
                     <TabPane
                         key={i}
