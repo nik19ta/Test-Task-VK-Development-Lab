@@ -9,7 +9,7 @@ import { GetWeather } from './store/weatherSlice';
 import { Layout } from 'antd'
 
 import { From } from './components/From'
-import { Cards } from './components/Cards'
+import { WeatherCards } from './components/WeatherCards'
 import { WeatherCity } from './interfaces/weather';
 
 const { Header, Sider, Content } = Layout;
@@ -29,15 +29,15 @@ const App: FC = () => {
 
   return (
       <Layout>
-        <Header>
+        <Header className="header" >
           <h1 className="header__title" >Weather</h1>
         </Header>
         <Layout className="main" >
           <Sider className="sider" >
             <From />
           </Sider>
-          <Content>
-            {JSON.stringify(weather).length > 3 && <Cards />}
+          <Content className="content" >
+            {JSON.stringify(weather).length > 3 && <WeatherCards />}
           </Content>
         </Layout>
       </Layout>

@@ -19,6 +19,9 @@ export const From: FC = () => {
             initialValues={{ remember: true }}
             onFinish={onFinish}
             className="form" >
+
+            <p className="from__title" >Type cities for example london or vladimir</p>
+
             <Form.Item
                 label="city name"
                 name="cityName"
