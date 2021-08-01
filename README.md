@@ -19,6 +19,7 @@ yarn
 2. Создать в корне проекта `.env` файл и записать туда ключ
 
 получить api key можно [тут](https://openweathermap.org/price)
+
 посмотреть api key можно [тут](https://home.openweathermap.org/api_keys)
 ```
 REACT_APP_OPEN_WEATHER_KEY=sekret key
@@ -29,5 +30,5 @@ REACT_APP_OPEN_WEATHER_KEY=sekret key
 ```sh
 npm start
 # or
-yarn bash
+yarn start
 ```
