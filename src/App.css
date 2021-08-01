@@ -108,4 +108,10 @@ pre {
         width: 97% !important;
         max-width: 97% !important;
     }
+    .ant-form-item-label {
+        flex-basis: 100px !important;
+    }
+    .ant-form-item-control {
+        flex: 0 0 auto !important;
+    }
 }
