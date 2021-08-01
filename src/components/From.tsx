@@ -1,13 +1,18 @@
 import { useDispatch } from 'react-redux'
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 
 import { Form, Input, Button } from 'antd';
 import { GetWeatherBySityName } from '../store/weatherSlice';
 
+
 export const From: FC = () => {
+    const refInput = useRef<Input>(null);
     const dispatch = useDispatch()
 
     const onFinish = (values: { cityName: string }) => {
+        if (refInput && refInput.current) {
+            refInput.current.input.value = '';
+        }
         dispatch(GetWeatherBySityName(values['cityName']))
     };
 
@@ -26,7 +31,7 @@ export const From: FC = () => {
                 label="city name"
                 name="cityName"
                 rules={[{ required: true, message: 'Please input city name!' }]} >
-                <Input />
+                <Input ref={refInput} />
             </Form.Item>
 
 
