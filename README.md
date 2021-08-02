@@ -8,6 +8,14 @@
 
 ## Запуск и разработка
 
+0. Склонировать проект
+
+```bash
+https://github.com/nik19ta/Test-Task-VK-Development-Lab.git
+# and
+cd Test-Task-VK-Development-Lab
+```
+
 1. Установить пакеты
 
 ```sh
