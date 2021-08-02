@@ -6,6 +6,8 @@
 
 [Ссылка на описание задание](./task.md)
 
+[live example](https://nik19ta.github.io/Test-Task-VK-Development-Lab/)
+
 ## Запуск и разработка
 
 0. Склонировать проект
