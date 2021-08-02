@@ -70,10 +70,12 @@ interface initialState {
     errors: boolean
 }
 
-const initialState: initialState = {
-    sities: [],
-    errors: false
-}
+const initialState: initialState = localStorage.getItem('reduxState')
+    ? JSON.parse(localStorage.getItem('reduxState') as string) as initialState : {
+        sities: [],
+        errors: false
+    } as initialState
+
 
 export const weatherSlice = createSlice({
     name: 'weather',
@@ -97,6 +99,12 @@ export const weatherSlice = createSlice({
             state.errors = true
         })
         builder.addCase(GetWeather.fulfilled, (state, action) => {
+            for (let i = 0; i < state.sities.length; i++) {
+                if (state.sities[i].city_name == action.payload.city_name) {
+                    return
+                }
+
+            }
             state.sities.push(action.payload)
         })
         builder.addCase(GetWeather.rejected, (state) => {
