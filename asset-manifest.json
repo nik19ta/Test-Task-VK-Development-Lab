@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/test-task/static/css/main.b70cc95a.chunk.css",
-    "main.js": "/test-task/static/js/main.46eec1d6.chunk.js",
-    "main.js.map": "/test-task/static/js/main.46eec1d6.chunk.js.map",
-    "runtime-main.js": "/test-task/static/js/runtime-main.7f5114b6.js",
-    "runtime-main.js.map": "/test-task/static/js/runtime-main.7f5114b6.js.map",
-    "static/css/2.c09b5ca6.chunk.css": "/test-task/static/css/2.c09b5ca6.chunk.css",
-    "static/js/2.ba8588c8.chunk.js": "/test-task/static/js/2.ba8588c8.chunk.js",
-    "static/js/2.ba8588c8.chunk.js.map": "/test-task/static/js/2.ba8588c8.chunk.js.map",
-    "index.html": "/test-task/index.html",
-    "static/css/2.c09b5ca6.chunk.css.map": "/test-task/static/css/2.c09b5ca6.chunk.css.map",
-    "static/css/main.b70cc95a.chunk.css.map": "/test-task/static/css/main.b70cc95a.chunk.css.map",
-    "static/js/2.ba8588c8.chunk.js.LICENSE.txt": "/test-task/static/js/2.ba8588c8.chunk.js.LICENSE.txt"
+    "main.css": "/Test-Task-VK-Development-Lab/static/css/main.b70cc95a.chunk.css",
+    "main.js": "/Test-Task-VK-Development-Lab/static/js/main.46eec1d6.chunk.js",
+    "main.js.map": "/Test-Task-VK-Development-Lab/static/js/main.46eec1d6.chunk.js.map",
+    "runtime-main.js": "/Test-Task-VK-Development-Lab/static/js/runtime-main.050d8909.js",
+    "runtime-main.js.map": "/Test-Task-VK-Development-Lab/static/js/runtime-main.050d8909.js.map",
+    "static/css/2.c09b5ca6.chunk.css": "/Test-Task-VK-Development-Lab/static/css/2.c09b5ca6.chunk.css",
+    "static/js/2.bce97c20.chunk.js": "/Test-Task-VK-Development-Lab/static/js/2.bce97c20.chunk.js",
+    "static/js/2.bce97c20.chunk.js.map": "/Test-Task-VK-Development-Lab/static/js/2.bce97c20.chunk.js.map",
+    "index.html": "/Test-Task-VK-Development-Lab/index.html",
+    "static/css/2.c09b5ca6.chunk.css.map": "/Test-Task-VK-Development-Lab/static/css/2.c09b5ca6.chunk.css.map",
+    "static/css/main.b70cc95a.chunk.css.map": "/Test-Task-VK-Development-Lab/static/css/main.b70cc95a.chunk.css.map",
+    "static/js/2.bce97c20.chunk.js.LICENSE.txt": "/Test-Task-VK-Development-Lab/static/js/2.bce97c20.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7f5114b6.js",
+    "static/js/runtime-main.050d8909.js",
     "static/css/2.c09b5ca6.chunk.css",
-    "static/js/2.ba8588c8.chunk.js",
+    "static/js/2.bce97c20.chunk.js",
     "static/css/main.b70cc95a.chunk.css",
     "static/js/main.46eec1d6.chunk.js"
   ]
